@@ -1,0 +1,14 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Drinks!</h1>
+  <h2>All the Drinks!</h2>
+  <ul>
+    <% drinks.forEach(drink => { %>
+    <li> 🥤 <%=drink.name %> is <%= drink.iced ? 'Iced🧊' : 'Not Iced 🚫🧊' %></li>
+    })
+  </ul>
+</section>
+
+<%- include('../partials/footer') %>
