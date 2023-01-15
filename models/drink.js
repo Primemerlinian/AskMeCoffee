@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const schema = mongoose.schema
+const Schema = mongoose.Schema
 
 const drinkSchema = new Schema({
   size: String,

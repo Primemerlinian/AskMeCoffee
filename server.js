@@ -43,7 +43,6 @@ app.use(
     path.join(path.dirname(fileURLToPath(import.meta.url)), 'public')
   )
 )
-app.use('/drinks', drinksRouter)
 
 // session middleware
 app.use(
@@ -55,21 +54,22 @@ app.use(
       sameSite: 'lax',
     },
   })
-)
-
-// passport middleware
-app.use(passport.initialize())
-app.use(passport.session())
-
-// custom middleware
-app.use(passDataToView)
-
-// router middleware
-app.use('/', indexRouter)
-app.use('/auth', authRouter)
-
-// catch 404 and forward to error handler
-app.use(function (req, res, next) {
+  )
+  
+  // passport middleware
+  app.use(passport.initialize())
+  app.use(passport.session())
+  
+  // custom middleware
+  app.use(passDataToView)
+  
+  // router middleware
+  app.use('/', indexRouter)
+  app.use('/auth', authRouter)
+  app.use('/drinks', drinksRouter)
+  
+  // catch 404 and forward to error handler
+  app.use(function (req, res, next) {
   next(createError(404))
 })
 
