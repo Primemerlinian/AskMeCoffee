@@ -58,11 +58,24 @@ function flipIced(req, res) {
   })
 }
 
-
+function edit(req, res) {
+  Drink.findById(req.params.id)
+  .then(drink => {
+    res.render('drinks/edit', {
+      drink,
+      title: "Edit ✎"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/drinks")
+  })
+}
 
 export {
   index,
   create,
   show,
   flipIced,
+  edit,
 }
