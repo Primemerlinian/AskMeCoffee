@@ -20,15 +20,31 @@ function create(req, res) {
   req.body.iced = !!req.body.iced
   Drink.create(req.body)
   .then(drink => {
-    res.redirect('/tacos')
+    res.redirect('/drinks')
   })
   .catch(err => {
     console.log(err)
-    res.redirect("/tacos")
+    res.redirect("/drinks")
+  })
+}
+
+function show(req,res) {
+  Drink.findById(req.params.id)
+  .populate("owner")
+  .then(drink => {
+    res.render('drinks/show', {
+      drink,
+      title: "🥤 show "
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/drinks")
   })
 }
 
 export {
   index,
   create,
+  show,
 }
