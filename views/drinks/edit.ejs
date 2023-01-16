@@ -1,0 +1,28 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Edit the Drink ✎</h1>
+  <form action="/drinks/<%= drink._id %>?_method=PUT" method="POST">
+    <label>
+      Name: 
+      <input 
+        type="text"
+        name="name" 
+        value="<%= drink.name %>" 
+        autocomplete="off"
+      >
+    </label>
+    <label>
+      Iced?
+      <input 
+        type="checkbox" 
+        name="iced" 
+				<%= drink.iced ? "checked" : "" %> 
+      >
+    </label>
+    <button type="submit">Edit the Drink ✎</button>
+  </form>
+</section>
+
+<%- include('../partials/footer') %>
