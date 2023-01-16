@@ -60,6 +60,7 @@ p, label, li, button, input {
 
 label {
   font-weight: bold;
+  color: black;
 }
 
 section {
@@ -67,7 +68,7 @@ section {
 }
 
 a {
-  color: #00B7FF;
+  color: #036635;
 }
 
 pre {
