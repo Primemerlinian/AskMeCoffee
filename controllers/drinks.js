@@ -43,8 +43,26 @@ function show(req,res) {
   })
 }
 
+function flipIced(req, res) {
+  Drink.findById(req.params.id)
+  .then(drink => {
+    drink.iced = !drink.iced
+    drink.save()
+    .then(() => {
+      res.redirect(`/drinks/${drink._id}`)
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/drinks")
+  })
+}
+
+
+
 export {
   index,
   create,
   show,
+  flipIced,
 }
