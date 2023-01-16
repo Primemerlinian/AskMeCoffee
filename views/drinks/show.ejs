@@ -8,12 +8,16 @@
   <% if (user) { %>
     <form 
       action="/drinks/<%= drink._id %>/flip-iced?_method=PATCH" 
-      method="POST"
-    >
+      method="POST">
       <button class="btn" type="submit">
         Make Drink <%= drink.iced ? 'Hot🔥🔥' : 'Iced 🧊🧊' %>
       </button>
     </form>
+  <% } %>
+  <% if (drink.owner.equals(user?.profile._id)) { %>
+    <a href="/drinks/<%= drinks._id %>/edit">
+      <button class="btn">Edit this Drink ✎</button>
+    </a>
   <% } %>
 </section>
 
