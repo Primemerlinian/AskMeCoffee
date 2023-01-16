@@ -72,10 +72,30 @@ function edit(req, res) {
   })
 }
 
+function update(req, res) {
+  Drink.findById(req.params.id)
+  .then(drink => {
+    if (drink.owner.equals(req.user.profile._id)) {
+      req.body.iced = !!req.body.iced
+      drink.updateOne(req.body)
+      .then(()=> {
+        res.redirect(`/drinks/${drink._id}`)
+      })
+    } else {
+      throw new Error('🚫 Not authorized 🚫')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/drinks`)
+  })
+}
+
 export {
   index,
   create,
   show,
   flipIced,
   edit,
+  update, 
 }
