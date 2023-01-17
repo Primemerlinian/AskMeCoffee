@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-color: white;
+  background-color: #E3D5CA;
   color: white;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
@@ -21,8 +21,8 @@ body {
 }
 
 nav {
-  background-color: white;
-  color: #1a1a1a;
+  background-color: #F5EBE0;
+  color: #D5BDAF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,6 +58,7 @@ ul {
 
 p, label, li, button, input {
   font-size: 18px;
+  color: black;
 }
 
 label {
@@ -70,7 +71,7 @@ section {
 }
 
 a {
-  color: #036635;
+  color: #B89078;
 }
 
 pre {
@@ -99,4 +100,12 @@ nav > a {
 
 .profile-avatar {
   margin-top: 50px;
+}
+
+li {
+  color: black;
+}
+
+div.card {
+  background-color: #F5EBE0;
 }

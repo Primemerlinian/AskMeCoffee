@@ -5,16 +5,22 @@
   <h1>Drinks!</h1>
   <% if (user) { %> 
     <h2>Add a Drink!</h2>
-    <form action="/drinks" method="'POST">
-      <label>
-        Drink Base: 
-        <input type="text" name="name" autocomplete="off">
+    <form action="/drinks" method="POST">
+      <label> Drink
+        <input type="text" name="name"
+        autocomplete="off">
       </label>
       <label>
-        Iced🧊:
+        Drink Base: 
+        <input type="text" name="drinkBase" autocomplete="off">
+      </label>
+      <label>
+        Sweetness Rating: 
+        <input type="number" name="sweetnessRating" autocomplete="off">
+      </label>
+      <label>
+        Iced🧊?:
         <input type="checkbox" name="iced">
-        Hot🔥:
-        <input type="checkbox" name="Hot">
       </label>
       <button type="submit">Add 🥤</button>
     </form>
@@ -23,10 +29,9 @@
     <ul>
       <% drinks.forEach(drink => { %>
         <li>
-          🥤
           <a href="/drinks/<%= drink._id%>"><%= drink.name %></a>
           is <%= drink.iced ? 'Iced' : 'Hot'%>
-          and was created by <%= drink.owner.name %>!
+          and was created by <%= drink.owner.name %>
         </li>
         <% }) %>
       </ul>

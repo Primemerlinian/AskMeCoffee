@@ -8,7 +8,7 @@ const Schema = mongoose.Schema
 // })
 
 const drinkSchema = new Schema({
-  size: String,
+  name: String,
   drinkBase: String, 
   sweetnessRating: Number,
   owner: {type: Schema.Types.ObjectId, ref: "Profile"},

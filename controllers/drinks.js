@@ -1,4 +1,4 @@
-import {Drink} from '../models/drink.js'
+import { Drink } from '../models/drink.js'
 
 function index(req, res) {
   Drink.find({})
@@ -16,8 +16,8 @@ function index(req, res) {
 }
 
 function create(req, res) {
-  req.body.owner = req.user.profile._id
   req.body.iced = !!req.body.iced
+  req.body.owner = req.user.profile._id
   Drink.create(req.body)
   .then(drink => {
     res.redirect('/drinks')
@@ -34,7 +34,7 @@ function show(req,res) {
   .then(drink => {
     res.render('drinks/show', {
       drink,
-      title: "AskMe Coffee "
+      title: "🥤 show "
     })
   })
   .catch(err => {
@@ -54,7 +54,7 @@ function flipIced(req, res) {
   })
   .catch(err => {
     console.log(err)
-    res.redirect("/drinks")
+    res.redirect('/drinks')
   })
 }
 

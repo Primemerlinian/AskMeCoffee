@@ -2,9 +2,9 @@
 <%- include('../partials/nav') %>
 
 <section>
-	<p>From the notes of <%= drink.owner.name %></p>
-  <h1><%= drink.name %> 🥤</h1>
-  <h2>This drink is <%= drink.iced ? 'Iced!' : 'Hot!' %></h2>
+	<p>From the notes of <%= drink.owner.name %>...</p>
+  <h1>🥤<%= drink.name %></h1>
+  <h2>This drink is <%= drink.iced ? 'Iced' : 'Hot' %></h2>
   <% if (user) { %>
     <form 
       action="/drinks/<%= drink._id %>/flip-iced?_method=PATCH" 
@@ -15,7 +15,7 @@
     </form>
   <% } %>
   <% if (drink.owner.equals(user?.profile._id)) { %>
-    <a href="/drinks/<%= drinks._id %>/edit">
+    <a href="/drinks/<%= drink._id %>/edit">
       <button class="btn">Edit this Drink ✎</button>
     </a>
     <form action="/drinks/<%= drink._id %>?_method=DELETE" method="POST">
