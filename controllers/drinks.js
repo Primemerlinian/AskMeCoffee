@@ -34,7 +34,7 @@ function show(req,res) {
   .then(drink => {
     res.render('drinks/show', {
       drink,
-      title: "🥤 show "
+      title: "AskMe Coffee "
     })
   })
   .catch(err => {
@@ -91,6 +91,24 @@ function update(req, res) {
   })
 }
 
+function deleteDrink(req, res) {
+  Drink.findById(req.params.id)
+  .then(drink => {
+    if (drink.owner.equals(req.user.profile._id)) {
+      drink.delete()
+      .then(() => {
+        res.redirect('/drinks')
+      })
+    } else {
+      throw new Error ('🚫 Not authorized 🚫')
+    }   
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/drinks')
+  })
+}
+
 export {
   index,
   create,
@@ -98,4 +116,5 @@ export {
   flipIced,
   edit,
   update, 
+  deleteDrink as delete,
 }
