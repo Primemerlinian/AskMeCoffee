@@ -12,7 +12,9 @@ const drinkSchema = new Schema({
   drinkBase: String, 
   sweetnessRating: Number,
   owner: {type: Schema.Types.ObjectId, ref: "Profile"},
+  iced: Boolean,
   // comments: [commentSchema],
+
 },{
   timestamps: true
 })

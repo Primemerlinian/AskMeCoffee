@@ -30,7 +30,7 @@
       <% drinks.forEach(drink => { %>
         <li>
           <a href="/drinks/<%= drink._id%>"><%= drink.name %></a>
-          is <%= drink.iced ? 'Iced' : 'Hot'%>
+          is <%= drink.iced ? 'iced' : 'hot'%>
           and was created by <%= drink.owner.name %>
         </li>
         <% }) %>

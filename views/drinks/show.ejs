@@ -4,13 +4,13 @@
 <section>
 	<p>From the notes of <%= drink.owner.name %>...</p>
   <h1>🥤<%= drink.name %></h1>
-  <h2>This drink is <%= drink.iced ? 'Iced' : 'Hot' %></h2>
+  <h2>This drink is <%= drink.iced ? 'iced' : 'hot' %></h2>
   <% if (user) { %>
     <form 
       action="/drinks/<%= drink._id %>/flip-iced?_method=PATCH" 
       method="POST">
       <button class="btn" type="submit">
-        Make Drink <%= drink.iced ? 'Hot' : 'Iced' %>
+        Make Drink <%= drink.iced ? 'hot' : 'iced' %>
       </button>
     </form>
   <% } %>
