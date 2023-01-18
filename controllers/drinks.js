@@ -28,18 +28,21 @@ function create(req, res) {
   })
 }
 
-function show(req,res) {
+function show(req, res) {
   Drink.findById(req.params.id)
-  .populate("owner")
+  .populate([
+    {path: "owner"},
+    {path: "comments.commenter"}
+  ])
   .then(drink => {
     res.render('drinks/show', {
-      drink,
-      title: "🥤 show "
+      title: "🥤 show",
+      drink
     })
   })
   .catch(err => {
     console.log(err)
-    res.redirect("/drinks")
+    res.redirect('/drinks')
   })
 }
 
