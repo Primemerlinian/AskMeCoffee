@@ -32,24 +32,24 @@
       <% } %>
       <h2>Comments</h2>
       <ul>
-      <% drink.comments?.forEach(comment => { %>
-        <li>
-          <%= comment.content %> - <%= comment.commenter.name %>
-        </li> 
-      <% }) %>
-    </ul>
-    <ul>
-      <% drink.comments?.forEach(comment => { %>
-        <li>
-          <%= comment.content %> - <%= comment.commenter.name %>
-          <% if (comment.commenter.equals(user?.profile._id)) { %>
-            <a href="/drinks/<%= drink._id %>/comments/<%= comment._id %>/edit">
-              <button class="btn">Edit Comment</button>
-            </a>
-          <% } %> 
-        </li> 
-      <% }) %>
-    </ul>
+        <% drink.comments?.forEach(comment => { %>
+          <li>
+            <%= comment.content %> - <%= comment.commenter.name %>
+            <% if (comment.commenter.equals(user?.profile)) { %>
+              <form 
+                action="/drinks/<%= drink._id %>/comments/<%= comment._id %>?_method=DELETE" 
+                method="POST"
+                class="inline"
+              >
+                <button class="btn" type="submit">Delete Comment</button>
+              </form>
+              <a href="/drinks/<%= drink._id %>/comments/<%= comment._id %>/edit">
+                <button class="btn">Edit Comment</button>
+              </a>
+            <% } %> 
+          </li> 
+        <% }) %>
+      </ul>
 </section>
 
 <%- include('../partials/footer') %>

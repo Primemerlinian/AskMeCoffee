@@ -176,6 +176,30 @@ function updateComment(req, res) {
   })
 }
 
+function deleteComment(req, res) {
+  Drink.findById(req.params.drinkId)
+  .then(drink => {
+    const comment = drink.comments.id(req.params.commentId)
+    if (comment.commenter.equals(req.user.profile._id)) {
+      drink.comments.remove(comment)
+      drink.save()
+      .then(() => {
+        res.redirect(`/drinks/${drink._id}`)
+      })
+      .catch(err => {
+        console.log(err)
+        res.redirect('/drinks')
+      })
+    } else {
+      throw new Error('🚫 Not authorized 🚫')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/drinks')
+  })
+}
+
 export {
   index,
   create,
@@ -187,4 +211,5 @@ export {
   addComment,
   editComment,
   updateComment,
+  deleteComment,
 }
