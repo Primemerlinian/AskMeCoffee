@@ -109,6 +109,26 @@ function deleteDrink(req, res) {
   })
 }
 
+function addComment(req, res) {
+  Drink.findById(req.params.id)
+  .then(drink => {
+    req.body.commenter = req.user.profile._id
+    drink.comments.push(req.body)
+    drink.save()
+    .then(()=> {
+      res.redirect(`/drinks/${drink._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/drinks')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/drinks')
+  })
+}
+
 export {
   index,
   create,
@@ -117,4 +137,5 @@ export {
   edit,
   update, 
   deleteDrink as delete,
+  addComment,
 }
