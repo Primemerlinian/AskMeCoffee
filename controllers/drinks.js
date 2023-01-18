@@ -46,7 +46,6 @@ function show(req,res) {
 function flipIced(req, res) {
   Drink.findById(req.params.id)
   .then(drink => {
-    console.log(drink.iced);
     drink.iced = !drink.iced
     drink.save()
     .then(() => {
