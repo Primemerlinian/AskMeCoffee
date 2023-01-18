@@ -18,6 +18,7 @@ router.post('/', isLoggedIn, drinksCtrl.create)
 router.post('/:id/comments', isLoggedIn, drinksCtrl.addComment)
 router.patch('/:id/flip-iced', isLoggedIn, drinksCtrl.flipIced)
 router.put('/:id', isLoggedIn, drinksCtrl.update)
+router.put('/:drinkId/comments/:commentId', isLoggedIn, drinksCtrl.updateComment)
 router.delete('/:id', isLoggedIn, drinksCtrl.delete)
 
 export {

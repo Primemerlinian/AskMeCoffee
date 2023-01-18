@@ -152,6 +152,30 @@ function editComment(req, res) {
   })
 }
 
+function updateComment(req, res) {
+  Drink.findById(req.params.drinkId)
+  .then(drink => {
+    const comment = drink.comments.id(req.params.commentId)
+    if (comment.commenter.equals(req.user.profile._id)) {
+      comment.set(req.body)
+      drink.save()
+      .then(() => {
+        res.redirect(`/drinks/${drink._id}`)
+      })
+      .catch(err => {
+        console.log(err)
+        res.redirect('/drinks')
+      })
+    } else {
+      throw new Error('🚫 Not authorized 🚫')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/drinks')
+  })
+}
+
 export {
   index,
   create,
@@ -162,5 +186,5 @@ export {
   deleteDrink as delete,
   addComment,
   editComment,
-
+  updateComment,
 }
