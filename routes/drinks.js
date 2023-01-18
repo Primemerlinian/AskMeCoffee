@@ -9,6 +9,11 @@ router.get('/', drinksCtrl.index)
 router.get('/:id', drinksCtrl.show)
 router.get('/:id/edit', isLoggedIn, drinksCtrl.edit)
 router.get('/:id', drinksCtrl.show)
+router.get(
+	'/:drinkId/comments/:commentId/edit', 
+	isLoggedIn, 
+	drinksCtrl.editComment
+)
 router.post('/', isLoggedIn, drinksCtrl.create)
 router.post('/:id/comments', isLoggedIn, drinksCtrl.addComment)
 router.patch('/:id/flip-iced', isLoggedIn, drinksCtrl.flipIced)
