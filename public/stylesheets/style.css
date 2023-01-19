@@ -20,8 +20,7 @@ body {
 }
 
 nav {
-  background-color: #e9edc9;
-  color: #FEFAE0;
+  color: #F6FAFB;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,9 +46,10 @@ h2 {
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 25px;
   color: black;
   font-family: 'Montserrat', sans-serif;
+  margin: 350px;
 }
 
 ul {
@@ -116,7 +116,5 @@ img.coffeecluster{
 
 img.illdrinktothat {
   align-self: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
-  margin-top: -50px;
+  margin-top: -550px;
 }
