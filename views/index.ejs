@@ -2,6 +2,9 @@
 <%- include('./partials/nav') %>
 
 <main>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
   <h1>Welcome to AskMeCoffee <%= user ? user.profile.name : "" %></h1>
   <% if (user?.profile.avatar) { %>
     <div>

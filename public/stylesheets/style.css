@@ -12,8 +12,7 @@ html {
 }
 
 body {
-  background-color: #E3D5CA;
-  color: white;
+  /* background-image: url(https://images.unsplash.com/photo-1487540765093-e5e1501d2c39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80); */
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
     'Helvetica Neue', sans-serif;
@@ -21,8 +20,8 @@ body {
 }
 
 nav {
-  background-color: #F5EBE0;
-  color: #D5BDAF;
+  background-color: #e9edc9;
+  color: #FEFAE0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,7 +39,7 @@ main {
 h1 {
   font-size: 36px;
   color: black;
-}
+  font-family: 'Alegreya', serif;}
 
 h2 {
   font-size: 30px;

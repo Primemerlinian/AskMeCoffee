@@ -9,13 +9,16 @@
       alt="<%= profile.name %>'s avatar"
     >
   </div>
-  <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
-    <!-- <h2>
-      <%= isSelf ? "You have" : `${profile.name} has` %> drinks! Here they are!
-    </h2>
-    <h2>
-      <%= isSelf ? "You don't" : `${profile.name} doesn't` %> have any drinks.
-    </h2>  --> 
+    <h1><%= isSelf ? "Your" : profile.name %> Drinks!</h1>
+    <% if (isSelf) { %>
+      <% profile.drinks.forEach(drink =>{ %>
+        <a href="/drinks/<%= drink._id %>"><%= drink.text %></a>
+      <% }) %> 
+    <% } else { %>
+      <% profile.drinks.forEach(drink =>{ %>
+        <a href="/drinks/<%= drink._id %>"><%= drink.text %></a>
+      <% }) %> 
+      <% } %>
 </main>
 
 <%- include('../partials/footer') %>
