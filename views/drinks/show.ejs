@@ -26,10 +26,10 @@
     </form>
     <% } %>
     <% if (user) { %>
-      <h3>Add a comment</h3>
+      <h3>Add a comment!</h3>
       <form action="/drinks/<%= drink._id %>/comments" method="POST">
-        <textarea name="content"></textarea><br>
-        <button>Add Comment</button>
+        <textarea class="commentbox"name="content"></textarea><br>
+        <button class="btn">Add Comment</button>
       </form>
       <% } %>
       <h2>Comments</h2>
