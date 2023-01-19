@@ -31,3 +31,21 @@
   <li>Interact with the API that our app will expose to create, view all, and delete ingredients. Ingredients will have a name.</li>
   <li>I should be able to associate ingredients with that drink from the drink detail page.</li>
 </ol>
+
+<h3> Technologies Used: </h3>
+
+<ul>
+  <li> HTML</li>
+  <li>JavaScript</li>
+  <li>CSS</li>
+  <li> Node.js</li>
+  <li>Express</li>
+  <li>Azure</li>
+  <li> Google OAuth</li>
+  <li>Fly.io</li>
+  <li>Mongoose</li>
+  <li> MongoDB</li>
+  <li>Trello</li>
+  <li>Github</li>
+</ul>
+
