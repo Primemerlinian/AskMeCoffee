@@ -17,3 +17,6 @@
 ![wireframe](images/../public/images/Screenshot_2023-01-13_at_3.25.58_PM.png)
 
 ![wireframe](images/../public/images/Screenshot_2023-01-13_at_3.26.08_PM.png)
+
+![wireframe](images/../public/images/Screenshot_2023-01-13_at_3.26.54_PM.png)
+
