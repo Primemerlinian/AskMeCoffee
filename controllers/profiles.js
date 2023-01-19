@@ -16,12 +16,14 @@ function index(req, res) {
 
 function show(req, res) {
   Profile.findById(req.params.id)
+  .populate('drinks')
   .then(profile => {
     const isSelf = profile._id.equals(req.user.profile._id)
+    console.log(profile);
     res.render("profiles/show", {
       title:  `${profile.name}'s profile`,
-      profile,
       isSelf,
+      profile,
     })
   })
   .catch((err) => {

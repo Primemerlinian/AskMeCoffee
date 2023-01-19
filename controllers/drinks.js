@@ -1,4 +1,6 @@
+import { profile } from 'console'
 import { Drink } from '../models/drink.js'
+import { Profile } from '../models/profile.js'
 
 function index(req, res) {
   Drink.find({})
@@ -15,24 +17,36 @@ function index(req, res) {
   })
 }
 
+
 function create(req, res) {
   req.body.iced = !!req.body.iced
   req.body.owner = req.user.profile._id
   Drink.create(req.body)
-  .then(drink => {
-    res.redirect('/drinks')
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect("/drinks")
-  })
+    .then(drink => {
+      Profile.findById(req.user.profile._id)
+        .then(profile => {
+          profile.drinks.push(drink._id)
+          profile.save()
+            .then(() => {
+              res.redirect('/drinks')
+            })
+        })
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/drinks')
+    })
+
 }
+
+
+
 
 function show(req, res) {
   Drink.findById(req.params.id)
   .populate([
     {path: "owner"},
-    {path: "comments.commenter"}
+    {path: "comments.commenter"},
   ])
   .then(drink => {
     res.render('drinks/show', {
@@ -45,6 +59,7 @@ function show(req, res) {
     res.redirect('/drinks')
   })
 }
+
 
 function flipIced(req, res) {
   Drink.findById(req.params.id)
