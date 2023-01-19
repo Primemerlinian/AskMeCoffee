@@ -1,4 +1,4 @@
-<h1> Welcome to AskMe Coffee!</h1>
+<h1> ☕️Welcome to AskMe Coffee!☕️</h1>
 
 <h2> The AskMe Coffee app stores your favorite coffee combinations and allows you to view your friend's drins and possibly try them the next time you are in line for coffee.</h2>
 
@@ -50,7 +50,7 @@
 </ul>
 
 <h3> Credits <h3>
-Main page image coffee collage
+Main page image coffee collage:
 
  ![coffeecollage](https://client.apps.us.bluescape.com/ZA8JM0Ah3V_OlhTZCLD_?objectId=63c8d0c226e015e9475853f7)
 
