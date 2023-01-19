@@ -39,6 +39,7 @@ h1 {
   font-size: 60px;
   color: black;
   font-family: 'Playfair Display', serif;
+  text-align: center;
 }
 h2 {
   font-size: 30px;
@@ -49,7 +50,6 @@ h3 {
   font-size: 25px;
   color: black;
   font-family: 'Montserrat', sans-serif;
-  margin: 350px;
 }
 
 ul {
@@ -122,4 +122,9 @@ img.illdrinktothat {
 a:hover {
   box-shadow: inset 100px 0 0 0 #DEDBF0;
   color: black;
+}
+
+.coffeecup{
+  width: 120px;
+  height: auto;
 }
