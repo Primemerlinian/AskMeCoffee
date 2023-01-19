@@ -20,7 +20,7 @@ body {
 }
 
 nav {
-  color: #F6FAFB;
+  background-color: #E3ECFF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,3 +128,8 @@ a:hover {
   width: 120px;
   height: auto;
 }
+
+.createdby {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+

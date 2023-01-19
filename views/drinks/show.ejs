@@ -2,10 +2,10 @@
 <%- include('../partials/nav') %>
 
 <section>
-	<p>This drink was created by <%= drink.owner.name %>...</p>
+	<p class="createdby"> This drink was created by <%= drink.owner.name %>...</p>
   <h1>
     <img class="coffeecup"src="../images/coffeecup.png" alt=""><%= drink.name %></h1>
-  <h3> Drink Base of <%= drink.drinkBase %> </h3>
+  <h3> This drink has a base of <%= drink.drinkBase %> </h3>
   <h2>This drink is <%= drink.iced ? 'iced' : 'hot' %></h2>
   <h3> Sweetness rating of <%= drink.sweetnessRating %> </h3>
   <% if (user) { %>
