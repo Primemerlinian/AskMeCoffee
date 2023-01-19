@@ -20,3 +20,6 @@
 
 ![wireframe](images/../public/images/Screenshot_2023-01-13_at_3.26.54_PM.png)
 
+<h3>Take a look at my Entity Relationship Diagram<h3>
+
+![ERD](images/../public/images/Screenshot_2023-01-13_at_2.00.29_PM.png)
