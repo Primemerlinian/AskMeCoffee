@@ -5,9 +5,9 @@
 	<p class="createdby"> This drink was created by <%= drink.owner.name %>...</p>
   <h1>
     <img class="coffeecup"src="../images/coffeecup.png" alt=""><%= drink.name %></h1>
-  <h3> This drink has a base of <%= drink.drinkBase %> </h3>
-  <h2>This drink is <%= drink.iced ? 'iced' : 'hot' %></h2>
-  <h3> Sweetness rating of <%= drink.sweetnessRating %> </h3>
+  <h3> This drink has a base of: <%= drink.drinkBase %> </h3>
+  <h2>This drink is <%= drink.iced ? '🧊Iced🧊' : '🔥Hot🔥' %></h2>
+  <h3> With a sweetness rating of: <%= drink.sweetnessRating %> </h3>
   <% if (user) { %>
     <form 
       action="/drinks/<%= drink._id %>/flip-iced?_method=PATCH" 
