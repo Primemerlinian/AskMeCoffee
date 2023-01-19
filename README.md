@@ -23,3 +23,11 @@
 <h3>Take a look at my Entity Relationship Diagram<h3>
 
 ![ERD](images/../public/images/Screenshot_2023-01-13_at_2.00.29_PM.png)
+
+<h2> NEXT STEPS/ ICE BOX 🧊 </h2>
+
+<ol>
+  <li>Create a dark mode theme to the app.</li>
+  <li>Interact with the API that our app will expose to create, view all, and delete ingredients. Ingredients will have a name.</li>
+  <li>I should be able to associate ingredients with that drink from the drink detail page.</li>
+</ol>
