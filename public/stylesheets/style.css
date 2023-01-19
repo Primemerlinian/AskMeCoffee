@@ -71,7 +71,7 @@ section {
 }
 
 a {
-  color: #B89078;
+  color: #9F96D3;
 }
 
 pre {
@@ -117,4 +117,9 @@ img.coffeecluster{
 img.illdrinktothat {
   align-self: flex-start;
   margin-top: -550px;
+}
+
+a:hover {
+  box-shadow: inset 100px 0 0 0 #DEDBF0;
+  color: black;
 }
