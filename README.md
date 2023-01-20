@@ -1,6 +1,6 @@
 <h1> ☕️Welcome to AskMe Coffee!☕️</h1>
 
-<h2> The AskMe Coffee app stores your favorite coffee combinations and allows you to view your friend's drins and possibly try them the next time you are in line for coffee.</h2>
+<h2> The AskMe Coffee app stores your favorite coffee combinations and allows you to view your friend's drinks and possibly try them the next time you are in line for coffee.</h2>
 
 <h2>
 <a href="https://askmecoffee.fly.dev/"> Click here and get your next coffee!</a>
