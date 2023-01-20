@@ -11,6 +11,20 @@
 
 ![appimage](public/images/appstartpage.png)
 
+![appimage](public/images/apphomepage.png)
+
+![appimage](public/images/drinksindexpage.png)
+
+![appimage](public/images/drinkdetails1.png)
+
+![appimage](public/images/drinkdetails2.png)
+
+![appimage](public/images/editdrinkform.png)
+
+![appimage](public/images/profilesindexpage.png)
+
+![appimage](public/images/profiledrinkindex.png)
+
 <h3>Here are some images of my wireframe.</h3>
 
 ![wireframe](images/../public/images/Screenshot_2023-01-13_at_3.25.28_PM.png)
