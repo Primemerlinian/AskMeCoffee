@@ -7,7 +7,7 @@ function index(req, res) {
     .then((drinks) => {
       res.render("drinks/index", {
         drinks,
-        title: "🥤",
+        title: "AskMe Coffee",
         user: req.user ? req.user : null,
       });
     })
@@ -40,7 +40,7 @@ function show(req, res) {
     .populate([{ path: "owner" }, { path: "comments.commenter" }])
     .then((drink) => {
       res.render("drinks/show", {
-        title: "🥤 show",
+        title: "AskMe Coffee",
         drink,
       });
     })
