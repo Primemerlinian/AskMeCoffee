@@ -7,6 +7,9 @@
 </h2>
 
 <a href="https://trello.com/invite/b/QXgQscWT/ATTI0050b7605840b13859173e7333e72a7cBBA23BFE/askme-coffee"> Here is my planning board. Check it out!</a>
+<h2>Here are images of my app!<h3>
+
+![appimage](public/images/appstartpage.png)
 
 <h3>Here are some images of my wireframe.</h3>
 

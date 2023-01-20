@@ -55,7 +55,6 @@ h1 {
   font-size: 60px;
   color: #f5cac3;
   font-family: 'Playfair Display', serif;
-  inline-size: 1550px; 
   text-align: center;
   margin-top: 120px;
   font-weight: bolder;
@@ -84,7 +83,7 @@ p, label, li, button, input {
 
 label {
   font-weight: bold;
-  color: #ffcad4;
+  color: #9f86c0;
   }
 
 section {
@@ -96,7 +95,7 @@ a {
   color: #868686;
   text-align: center;
   font-weight: bold;
-  font-size: larger;
+  font-size: x-large;
 }
 
 pre {
@@ -161,7 +160,7 @@ img.illdrinktothat {
 }
 
 a:hover {
-  box-shadow: inset 200px 0 0 0 #EAF5E6;
+  box-shadow: inset 1600px 0 0 0 #EAF5E6;
   color: #142B30;
 }
 
@@ -174,6 +173,7 @@ a:hover {
   font-family:'poppins', sans-serif;
   font-weight: bold;
   margin: 100px;
+  text-align: center;
 }
 
 
@@ -285,6 +285,8 @@ body.bgimgselect {
   align-items: flex-end;
   background-size: 1000px;
   background-position: right;
+  text-align: center;
+  
 
 }
 
@@ -298,3 +300,6 @@ body.bgimgselect {
   padding-top: 120px;
 }
 
+#drinkview {
+    inline-size: 1550px; 
+}
