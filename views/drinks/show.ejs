@@ -1,63 +1,64 @@
-<%- include('../partials/html-head') %>
-<%- include('../partials/nav') %>
+<%- include('../partials/html-head') %> <%- include('../partials/nav') %>
 <body class="bgimgselect">
-<section>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat:wght@200&family=Playfair+Display:ital@1&family=Poppins:ital,wght@1,100&display=swap" rel="stylesheet">
-	<p class="createdby" id="drinkview"> This drink was created by <%= drink.owner.name %>...</p>
-  <img class="coffeecup"src="../images/coffeecup.png" alt="">
-  <h1>
-    <%= drink.name %>
-  </h1>
-  <h3> This drink has a base of: <%= drink.drinkBase %> </h3>
-  <h2>This drink is <%= drink.iced ? '🧊Iced🧊' : '🔥Hot🔥' %></h2>
-  <h3> With a sweetness rating of: <%= drink.sweetnessRating %> </h3>
-  <% if (user) { %>
-    <form 
-      action="/drinks/<%= drink._id %>/flip-iced?_method=PATCH" 
-      method="POST">
+  <section>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat:wght@200&family=Playfair+Display:ital@1&family=Poppins:ital,wght@1,100&display=swap"
+      rel="stylesheet"
+    />
+    <p class="createdby" id="drinkview">
+      This drink was created by <%= drink.owner.name %>...
+    </p>
+    <img class="coffeecup" src="../images/coffeecup.png" alt="" />
+    <h1><%= drink.name %></h1>
+    <h3>This drink has a base of: <%= drink.drinkBase %></h3>
+    <h2>This drink is <%= drink.iced ? '🧊Iced🧊' : '🔥Hot🔥' %></h2>
+    <h3>With a sweetness rating of: <%= drink.sweetnessRating %></h3>
+    <% if (user) { %>
+    <form
+      action="/drinks/<%= drink._id %>/flip-iced?_method=PATCH"
+      method="POST"
+    >
       <button class="btn" type="submit">
         Make Drink <%= drink.iced ? '🔥' : '🧊' %>
       </button>
     </form>
-  <% } %>
-  <% if (drink.owner.equals(user?.profile._id)) { %>  
+    <% } %> <% if (drink.owner.equals(user?.profile._id)) { %>
     <a href="/drinks/<%= drink._id %>/edit">
       <button class="btn">Edit this Drink ✎</button>
     </a>
     <form action="/drinks/<%= drink._id %>?_method=DELETE" method="POST">
       <button class="btn" type="submit">🗑️</button>
     </form>
+    <% } %> <% if (user) { %>
+    <h3>Add a comment!</h3>
+    <form action="/drinks/<%= drink._id %>/comments" method="POST">
+      <textarea class="commentbox" name="content"></textarea><br />
+      <button class="btn">Add Comment</button>
+    </form>
     <% } %>
-    <% if (user) { %>
-      <h3>Add a comment!</h3>
-      <form action="/drinks/<%= drink._id %>/comments" method="POST">
-        <textarea class="commentbox"name="content"></textarea><br>
-        <button class="btn">Add Comment</button>
-      </form>
-      <% } %>
-      <h2>Comments</h2>
-      <ul>
-        <% drink.comments?.forEach(comment => { %>
-          <li>
-            <%= comment.content %> - <%= comment.commenter.name %>
-            <% if (comment.commenter.equals(user?.profile)) { %>
-              <form 
-                action="/drinks/<%= drink._id %>/comments/<%= comment._id %>?_method=DELETE" 
-                method="POST"
-                class="inline"
-              >
-                <button class="btn" type="submit">Delete Comment</button>
-              </form>
-              <a href="/drinks/<%= drink._id %>/comments/<%= comment._id %>/edit">
-                <button class="btn">Edit Comment</button>
-              </a>
-            <% } %> 
-          </li> 
-        <% }) %>
-      </ul>
-</section>
+    <h2>Comments</h2>
+    <ul>
+      <% drink.comments?.forEach(comment => { %>
+      <li>
+        <%= comment.content %> - <%= comment.commenter.name %> <% if
+        (comment.commenter.equals(user?.profile)) { %>
+        <form
+          action="/drinks/<%= drink._id %>/comments/<%= comment._id %>?_method=DELETE"
+          method="POST"
+          class="inline"
+        >
+          <button class="btn" type="submit">Delete Comment</button>
+        </form>
+        <a href="/drinks/<%= drink._id %>/comments/<%= comment._id %>/edit">
+          <button class="btn">Edit Comment</button>
+        </a>
+        <% } %>
+      </li>
+      <% }) %>
+    </ul>
+  </section>
 </body>
 
 <%- include('../partials/footer') %>

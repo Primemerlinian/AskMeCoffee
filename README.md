@@ -7,7 +7,8 @@
 </h2>
 
 <a href="https://trello.com/invite/b/QXgQscWT/ATTI0050b7605840b13859173e7333e72a7cBBA23BFE/askme-coffee"> Here is my planning board. Check it out!</a>
-<h2>Here are images of my app!<h3>
+
+<h2>Here are images of my app!<h2>
 
 ![appimage](public/images/appstartpage.png)
 
@@ -69,8 +70,8 @@
 <h3> Credits <h3>
 Main page image coffee collage:
 
- ![coffeecollage](https://client.apps.us.bluescape.com/ZA8JM0Ah3V_OlhTZCLD_?objectId=63c8d0c226e015e9475853f7)
+![coffeecollage](https://client.apps.us.bluescape.com/ZA8JM0Ah3V_OlhTZCLD_?objectId=63c8d0c226e015e9475853f7)
 
- Color Theme: [Coolors.co](https://coolors.co)
+Color Theme: [Coolors.co](https://coolors.co)
 
- Button Styling: [CssScan](https://getcssscan.com/css-buttons-examples)
+Button Styling: [CssScan](https://getcssscan.com/css-buttons-examples)

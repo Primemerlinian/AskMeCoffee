@@ -1,27 +1,27 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/profiles/index.css">
+<link rel="stylesheet" href="/stylesheets/profiles/index.css" />
 <%- include('../partials/nav') %>
 <body class="bgimgselect">
-<main>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat:wght@200&family=Playfair+Display:ital@1&family=Poppins:ital,wght@1,100&display=swap" rel="stylesheet">
-  <div class="card-container">
-    <% profiles.forEach(profile => { %>
+  <main>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat:wght@200&family=Playfair+Display:ital@1&family=Poppins:ital,wght@1,100&display=swap"
+      rel="stylesheet"
+    />
+    <div class="card-container">
+      <% profiles.forEach(profile => { %>
       <a class="text-decoration-none" href="/profiles/<%= profile._id %>">
         <div class="card">
-          <img 
-            src="<%= profile.avatar %>" 
-            alt="<%= profile.name %>'s avatar"
-          >
+          <img src="<%= profile.avatar %>" alt="<%= profile.name %>'s avatar" />
           <div class="card-body">
             <h1 class="card-title"><%= profile.name %></h1>
           </div>
         </div>
       </a>
-    <% }) %>
-  </div>
-</main>
+      <% }) %>
+    </div>
+  </main>
 </body>
 
 <%- include('../partials/footer') %>
