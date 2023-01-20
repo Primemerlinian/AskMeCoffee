@@ -1,3 +1,11 @@
+
+body {
+  background-image: url("../images/coffeebeansfalling.png");
+  width: 90%;
+  align-items: flex-end;
+  background-size: 1000px;
+  background-position: right;
+} 
 .main {
   display: flex;
   justify-content: center;

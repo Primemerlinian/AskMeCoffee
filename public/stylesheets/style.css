@@ -1,5 +1,6 @@
 html {
-  box-sizing: border-box
+  box-sizing: border-box;
+  height: 100vh;
 }
 
 /* The Universal Selector */
@@ -17,15 +18,30 @@ body {
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
     'Helvetica Neue', sans-serif;
   margin: 0;
+  height: 100%;
+  /* background-image: url("../images/coffeebeansfalling.png"); */
+  width: 90%;
+  align-items: flex-end;
+  background-size: 1000px;
+  background-position: right;
+
+}
+
+img {
+  margin-top: 120 px;
+
 }
 
 nav {
-  background-color: #E3ECFF;
+  background-color: #e5e5e5;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
   min-height: 60px;
+  border-bottom: black solid 1px;
+  width: 100%;
+  position: fixed;
 }
 
 main {
@@ -37,19 +53,24 @@ main {
 
 h1 {
   font-size: 60px;
-  color: black;
+  color: #f5cac3;
   font-family: 'Playfair Display', serif;
+  inline-size: 1550px; 
   text-align: center;
+  margin-top: 120px;
+  font-weight: bolder;
+
 }
 h2 {
   font-size: 30px;
-  color: black;
+  color: #f4acb7;
 }
 
 h3 {
   font-size: 25px;
-  color: black;
+  color: #e2afff;
   font-family: 'Montserrat', sans-serif;
+  text-align: center;
 }
 
 ul {
@@ -63,8 +84,8 @@ p, label, li, button, input {
 
 label {
   font-weight: bold;
-  color: black;
-}
+  color: #ffcad4;
+  }
 
 section {
   padding: 50px;
@@ -72,7 +93,10 @@ section {
 }
 
 a {
-  color: #9F96D3;
+  color: #868686;
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
 }
 
 pre {
@@ -100,15 +124,31 @@ nav > a {
 }
 
 .profile-avatar {
-  margin-top: 50px;
+  margin-top: 120px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150%;
+
 }
 
 li {
   color: black;
+  font-family: 'poppins', sans-serif;
+  font-weight: bold;
+
 }
 
 div.card {
-  background-color: #F5EBE0;
+  background-color: #EAF5E6;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  /* margin-top: 120px; */
+  /* padding-top: 120px; */
+}
+
+.card:hover {
+  box-shadow: inset 400px 0 0 0;
+
 }
 
 img.coffeecluster{
@@ -121,8 +161,8 @@ img.illdrinktothat {
 }
 
 a:hover {
-  box-shadow: inset 100px 0 0 0 #DEDBF0;
-  color: black;
+  box-shadow: inset 200px 0 0 0 #EAF5E6;
+  color: #142B30;
 }
 
 .coffeecup{
@@ -131,7 +171,9 @@ a:hover {
 }
 
 .createdby {
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:'poppins', sans-serif;
+  font-weight: bold;
+  margin: 100px;
 }
 
 
@@ -210,3 +252,49 @@ a:hover {
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   padding: 10px;
 }
+
+.nav {
+  font-size: 19px;
+  font-weight: 250;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.card-container {
+  padding: 200px;
+  display: flex;
+  align-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150%;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+body.bgimgselect {
+  background-image: url(../images/coffeebeansfalling.png);
+  width: 110%;
+  align-items: flex-end;
+  background-size: 1000px;
+  background-position: right;
+
+}
+
+.editcommentform {
+  flex-direction: column-reverse;
+  margin: 120px;
+  
+}
+
+#editcommentbutton {
+  padding-top: 120px;
+}
+
