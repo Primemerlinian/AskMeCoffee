@@ -87,6 +87,8 @@ label {
   }
 
 section {
+  background-image: url(../images/coffeebeansfalling.png);
+  background-repeat: no-repeat;
   padding: 50px;
   text-align: center;
 }
@@ -286,7 +288,7 @@ body.bgimgselect {
   background-size: 1000px;
   background-position: right;
   text-align: center;
-  
+  background-repeat:no-repeat ;
 
 }
 
