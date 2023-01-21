@@ -58,6 +58,8 @@ h1 {
   text-align: center;
   margin-top: 120px;
   font-weight: bolder;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: black;
 
 }
 h2 {
@@ -176,6 +178,7 @@ a:hover {
   font-weight: bold;
   margin: 100px;
   text-align: center;
+  font-size: xx-large;
 }
 
 
