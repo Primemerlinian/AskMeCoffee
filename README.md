@@ -12,17 +12,11 @@
 
 ![appimage](public/images/appstartpage.png)
 
-![appimage](public/images/apphomepage.png)
-
 ![appimage](public/images/drinksindexpage.png)
 
 ![appimage](public/images/drinkdetails1.png)
 
-![appimage](public/images/drinkdetails2.png)
-
 ![appimage](public/images/editdrinkform.png)
-
-![appimage](public/images/profilesindexpage.png)
 
 ![appimage](public/images/profiledrinkindex.png)
 
@@ -34,9 +28,7 @@
 
 ![wireframe](images/../public/images/Screenshot_2023-01-13_at_3.25.58_PM.png)
 
-![wireframe](images/../public/images/Screenshot_2023-01-13_at_3.26.08_PM.png)
 
-![wireframe](images/../public/images/Screenshot_2023-01-13_at_3.26.54_PM.png)
 
 <h3>Take a look at my Entity Relationship Diagram<h3>
 
