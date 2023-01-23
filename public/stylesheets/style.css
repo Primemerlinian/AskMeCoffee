@@ -54,7 +54,7 @@ main {
 h1 {
   font-size: 60px;
   color: #f5cac3;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Philosopher', sans-serif;
   text-align: center;
   margin-top: 120px;
   font-weight: bolder;
@@ -70,7 +70,7 @@ h2 {
 h3 {
   font-size: 25px;
   color: #e2afff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   text-align: center;
 }
 
@@ -137,7 +137,7 @@ nav > a {
 
 li {
   color: black;
-  font-family: 'poppins', sans-serif;
+  font-family: 'Yantramanav', sans-serif;
   font-weight: bold;
 
 }
@@ -174,7 +174,7 @@ a:hover {
 }
 
 .createdby {
-  font-family:'poppins', sans-serif;
+  font-family: 'Yantramanav', sans-serif;
   font-weight: bold;
   margin: 100px;
   text-align: center;
