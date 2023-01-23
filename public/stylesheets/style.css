@@ -311,4 +311,6 @@ body.bgimgselect {
 
 .githublink {
   font-size: small;
+  font-family: 'Philosopher', sans-serif;
+  color: black;
 }
