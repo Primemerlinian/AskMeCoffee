@@ -308,3 +308,7 @@ body.bgimgselect {
 #drinkview {
     inline-size: 1550px; 
 }
+
+.githublink {
+  font-size: small;
+}
