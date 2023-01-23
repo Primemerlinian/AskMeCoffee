@@ -314,3 +314,8 @@ body.bgimgselect {
   font-family: 'Philosopher', sans-serif;
   color: black;
 }
+
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
