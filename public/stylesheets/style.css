@@ -99,7 +99,7 @@ a {
   color: #868686;
   text-align: center;
   font-weight: bold;
-  font-size: x-large;
+  font-size: 2vw;
 }
 
 pre {
@@ -310,7 +310,7 @@ body.bgimgselect {
 }
 
 .githublink {
-  font-size: small;
+  font-size: 1vw;
   font-family: 'Philosopher', sans-serif;
   color: black;
 }

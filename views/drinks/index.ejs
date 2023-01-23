@@ -32,8 +32,8 @@
     <ul>
       <% drinks.forEach(drink => { %>
       <li>
+        <%= drink.iced ? 'Iced' : 'Hot'%>
         <a href="/drinks/<%= drink._id%>"><%= drink.name %></a>
-        is <%= drink.iced ? 'iced' : 'hot'%>
       </li>
       <% }) %>
     </ul>
