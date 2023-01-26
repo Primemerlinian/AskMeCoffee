@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background-color:#eeecea;
+  background-color:#faf8f4;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
     'Helvetica Neue', sans-serif;
@@ -33,7 +33,7 @@ img {
 }
 
 nav {
-  background-color: #E4F1F4;
+  background-color: #efd8d4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,7 +97,7 @@ section {
 
 
 a {
-  color: #868686;
+  color: black;
   text-align: center;
   font-weight: bold;
   font-size: 2vw;
