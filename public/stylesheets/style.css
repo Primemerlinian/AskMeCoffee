@@ -3,12 +3,16 @@ html {
   height: 100vh;
 }
 
-/* The Universal Selector */
-*, /* All elements*/
-*::before, /* All ::before pseudo-elements */
-*::after { /* All ::after pseudo-elements */
-  /* height & width will now include border & padding by default
-     but can be over-ridden as needed */
+@media only screen and (max-width: 768px) {
+  html {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+*,
+*::before, 
+*::after { 
   box-sizing: inherit;
 }
 
@@ -157,11 +161,55 @@ div.card {
 
 img.coffeecluster{
   align-self: flex-end;
+  display: inline-block;
+
+}
+
+@media (max-width: 768px) {
+  img.coffeecluster {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    margin: 0 auto;
+  }
 }
 
 img.illdrinktothat {
   align-self: flex-start;
-  margin-top: -550px;
+  /* margin-top: -550px; */
+  display: inline-block;
+  margin-bottom: 50px;
+  
+}
+
+@media (max-width: 768px) {
+  img.illdrinktothat {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h6 {
+    position: absolute;
+    bottom: 0;
+    padding: -20px;
+    font-size: 16px;
+    text-align: center;
+
+  }
+}
+@media screen and (max-width: 768px) {
+  a.githublink {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+
+  }
 }
 
 a:hover {
@@ -314,9 +362,4 @@ body.bgimgselect {
   font-size: 1vw;
   font-family: 'Philosopher', sans-serif;
   color: black;
-}
-
-@viewport {
-  width: device-width ;
-  zoom: 1.0 ;
 }
