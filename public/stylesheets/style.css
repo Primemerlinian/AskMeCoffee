@@ -3,37 +3,34 @@ html {
   height: 100vh;
 }
 
-@media only screen and (max-width: 768px) {
-  html {
-    display: block;
-    margin: 0 auto;
-  }
-}
 
 *,
-*::before, 
-*::after { 
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
 body {
-  background-color:#faf8f4;
-  /* Use a system font, if none are available use any found sans-sarif font */
-  font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
-    'Helvetica Neue', sans-serif;
-  margin: 0;
-  height: 100%;
-  /* background-image: url("../images/coffeebeansfalling.png"); */
+  background-color: #faf8f4;
+  font-family: system-ui, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    "Helvetica Neue", sans-serif;
+  /* margin: 0; */
   width: 90%;
   align-items: flex-end;
-  background-size: 1000px;
+  /* background-size: 1000px; */
   background-position: right;
+}
 
+@media screen and (max-width: 768px) {
+  body {
+    /* align-items: center;
+    position: absolute; */
+    overflow: auto;
+  }
 }
 
 img {
   margin-top: 120 px;
-
 }
 
 nav {
@@ -48,23 +45,42 @@ nav {
   position: fixed;
 }
 
+@media screen and (max-width: 768px) {
+  nav {
+    background-color: #efd8d4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    min-height: 60px;
+    border-bottom: black solid 1px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1;
+  }
+}
+
 main {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  overflow: auto;
 }
 
 h1 {
   font-size: 60px;
   color: #f5cac3;
-  font-family: 'Philosopher', sans-serif;
+  font-family: "Philosopher", sans-serif;
   text-align: center;
   margin-top: 120px;
   font-weight: bolder;
   -webkit-text-stroke-width: 0.1px;
   -webkit-text-stroke-color: black;
-
 }
 h2 {
   font-size: 30px;
@@ -74,7 +90,7 @@ h2 {
 h3 {
   font-size: 25px;
   color: #e2afff;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-align: center;
 }
 
@@ -82,7 +98,11 @@ ul {
   list-style-type: none;
 }
 
-p, label, li, button, input {
+p,
+label,
+li,
+button,
+input {
   font-size: 18px;
   color: black;
 }
@@ -90,7 +110,7 @@ p, label, li, button, input {
 label {
   font-weight: bold;
   color: #9f86c0;
-  }
+}
 
 section {
   background-image: url(../images/coffeebeansfalling.png);
@@ -98,7 +118,6 @@ section {
   padding: 50px;
   text-align: center;
 }
-
 
 a {
   color: black;
@@ -137,32 +156,36 @@ nav > a {
   margin-left: auto;
   margin-right: auto;
   width: 150%;
-
 }
 
 li {
   color: black;
-  font-family: 'Yantramanav', sans-serif;
+  font-family: "Yantramanav", sans-serif;
   font-weight: bold;
-
 }
 
 div.card {
-  background-color: #EAF5E6;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  background-color: #eaf5e6;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   /* margin-top: 120px; */
   /* padding-top: 120px; */
 }
 
 .card:hover {
   box-shadow: inset 400px 0 0 0;
-
+}
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    position: absolute;
+    overflow: auto;
+  }
 }
 
-img.coffeecluster{
+img.coffeecluster {
   align-self: flex-end;
   display: inline-block;
-
 }
 
 @media (max-width: 768px) {
@@ -171,15 +194,15 @@ img.coffeecluster{
     width: 100%;
     margin-bottom: 10px;
     margin: 0 auto;
+    /* margin-top: -50px; */
+    margin-bottom: -50px;
   }
 }
 
 img.illdrinktothat {
   align-self: flex-start;
-  /* margin-top: -550px; */
   display: inline-block;
   margin-bottom: 50px;
-  
 }
 
 @media (max-width: 768px) {
@@ -188,49 +211,38 @@ img.illdrinktothat {
     width: 100%;
     margin-bottom: 30px;
     align-items: center;
+    /* margin-top: -50px; */
+    margin-bottom: -90px;
   }
 }
 
-@media screen and (max-width: 768px) {
-  h6 {
-    position: absolute;
-    bottom: 0;
-    padding: -20px;
-    font-size: 16px;
-    text-align: center;
-
-  }
-}
 @media screen and (max-width: 768px) {
   a.githublink {
     position: absolute;
     bottom: 0;
-    padding: 10px;
+    padding-left: -20px;
     font-size: 16px;
     text-align: center;
-
   }
-}
+} 
 
 a:hover {
-  box-shadow: inset 1600px 0 0 0 #EAF5E6;
-  color: #142B30;
+  box-shadow: inset 1600px 0 0 0 #eaf5e6;
+  color: #142b30;
 }
 
-.coffeecup{
+.coffeecup {
   width: 120px;
   height: auto;
 }
 
 .createdby {
-  font-family: 'Yantramanav', sans-serif;
+  font-family: "Yantramanav", sans-serif;
   font-weight: bold;
   margin: 100px;
   text-align: center;
   font-size: xx-large;
 }
-
-
 
 /* CSS */
 .btn {
@@ -239,18 +251,19 @@ a:hover {
   background-color: #fff;
   border-radius: 24px;
   border-style: none;
-  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
   box-sizing: border-box;
   color: #3c4043;
   cursor: pointer;
   display: inline-flex;
   fill: currentcolor;
-  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
   height: 48px;
   justify-content: center;
-  letter-spacing: .25px;
+  letter-spacing: 0.25px;
   line-height: normal;
   max-width: 100%;
   overflow: visible;
@@ -258,22 +271,24 @@ a:hover {
   position: relative;
   text-align: center;
   text-transform: none;
-  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   width: auto;
-  will-change: transform,opacity;
+  will-change: transform, opacity;
   z-index: 0;
 }
 
 .btn:hover {
-  background: #F6F9FE;
+  background: #f6f9fe;
   color: #174ea6;
 }
 
 .btn:active {
-  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%),
+    0 8px 12px 6px rgb(60 64 67 / 15%);
   outline: none;
 }
 
@@ -283,23 +298,28 @@ a:hover {
 }
 
 .btn:not(:disabled) {
-  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
 }
 
 .btn:not(:disabled):hover {
-  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 2px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 6px 10px 4px;
 }
 
 .btn:not(:disabled):focus {
-  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
 }
 
 .btn:not(:disabled):active {
-  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 4px 4px 0,
+    rgba(60, 64, 67, 0.15) 0 8px 12px 6px;
 }
 
 .btn:disabled {
-  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
 }
 
 .commentbox {
@@ -340,14 +360,12 @@ body.bgimgselect {
   background-size: 1000px;
   background-position: right;
   text-align: center;
-  background-repeat:no-repeat ;
-
+  background-repeat: no-repeat;
 }
 
 .editcommentform {
   flex-direction: column-reverse;
   margin: 120px;
-  
 }
 
 #editcommentbutton {
@@ -355,11 +373,11 @@ body.bgimgselect {
 }
 
 #drinkview {
-    inline-size: 1550px; 
+  inline-size: 1550px;
 }
 
 .githublink {
   font-size: 1vw;
-  font-family: 'Philosopher', sans-serif;
+  font-family: "Philosopher", sans-serif;
   color: black;
 }
