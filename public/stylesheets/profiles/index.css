@@ -6,10 +6,10 @@ body {
   background-size: 1000px;
   background-position: right;
 } 
-.main {
+/* .main {
   display: flex;
   justify-content: center;
-}
+} */
 
 .card-container {
   display: flex;

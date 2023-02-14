@@ -1,8 +1,6 @@
 
 <%- include('../partials/html-head') %> <%- include('../partials/nav') %>
 <body class="bgimgselect">
-
-<main>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +16,6 @@
   <% if (isSelf) { %> <% profile.drinks.forEach(drink =>{ %>
   <a href="/drinks/<%= drink._id %>"><%= drink.name %></a>
   <% }) %> <% } %>
-</main>
 </body>
 
 <%- include('../partials/footer') %>
